@@ -1,0 +1,26 @@
+
+{
+  "short_name": "وصلها",
+  "name": "وصلها - خدمة التوصيل الذكية",
+  "description": "تطبيقك الأول لطلب خدمات التوصيل والطلبات داخل المنوفية وكافة قراها وعزبها.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#2D9469",
+  "background_color": "#f8fafc",
+  "dir": "rtl",
+  "lang": "ar",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

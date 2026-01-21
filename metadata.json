@@ -1,0 +1,8 @@
+{
+  "name": "وصلها - خدمة التوصيل الذكية v2",
+  "description": "تطبيقك الأول لطلب خدمات التوصيل والطلبات داخل المنوفيه.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}

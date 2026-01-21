@@ -1,0 +1,171 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background-color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  color: #0f172a; /* Slate-900 for better text visibility */
+  overflow: hidden;
+}
+
+/* Base Layout Containers */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.main-content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Ride Hailing Layout Utility */
+.rh-layout {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full screen map behind UI */
+.rh-map-view {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: #f1f5f9;
+}
+
+/* Floating UI Panel (Bottom Sheet on Mobile) */
+.rh-ui-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: white;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.15);
+  max-height: 85vh;
+  overflow-y: auto;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 5rem; /* Space for bottom nav */
+}
+
+/* Grabber for Mobile UI */
+.bottom-sheet-grabber {
+  width: 48px;
+  height: 6px;
+  background: #cbd5e1; /* slate-300 */
+  border-radius: 3px;
+  margin: 16px auto;
+}
+
+/* Responsive Overrides - Tablet */
+@media (min-width: 768px) {
+  .rh-ui-panel {
+    bottom: 6rem;
+    left: 2rem;
+    right: auto;
+    width: 400px;
+    border-radius: 2.5rem;
+    max-height: calc(100vh - 12rem);
+  }
+}
+
+/* Responsive Overrides - Desktop */
+@media (min-width: 1024px) {
+  .rh-layout {
+    flex-direction: row-reverse; /* Panel on Right, Map on Left */
+  }
+  
+  .rh-map-view {
+    position: relative;
+    flex: 1;
+    z-index: 0;
+  }
+  
+  .rh-ui-panel {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: 35%; /* Exact spec: 35% Panel */
+    height: 100%;
+    max-height: none;
+    border-radius: 0;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.05);
+    border-left: 1px solid #e2e8f0;
+    padding-bottom: 2rem;
+  }
+
+  .bottom-sheet-grabber {
+    display: none;
+  }
+}
+
+/* Scrollbar Handling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Typography Enhancements */
+.label-strong {
+  font-weight: 700;
+  color: #1e293b; /* slate-800 */
+  font-size: 0.95rem;
+}
+
+.helper-text {
+  font-weight: 500;
+  color: #64748b; /* slate-500 */
+  font-size: 0.75rem;
+}
+
+/* Button & Interaction Sizing */
+button {
+  min-height: 48px; /* Minimum for accessibility */
+}
+
+.icon-large {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2.5px;
+}
+
+/* Map Overlays */
+.map-placeholder-text {
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: #2D9469;
+}
+
+/* Footer Styling */
+.app-footer {
+  width: 100%;
+  text-align: center;
+  padding: 2.5rem 0 1.5rem;
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8; /* slate-400 */
+  direction: rtl;
+}

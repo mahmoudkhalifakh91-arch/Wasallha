@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#2D9469" />
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="وصلها" />
+    
+    <link rel="apple-touch-icon" href="https://img.icons8.com/fluency-systems-filled/180/FFFFFF/bicycle.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/fluency-systems-filled/32/2D9469/bicycle.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="https://img.icons8.com/fluency-systems-filled/192/2D9469/bicycle.png" />
+    <link rel="manifest" href="./manifest.json" />
+    
+    <title>وصلها - خدمة التوصيل الذكية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <style>
+      :root {
+        --emerald-primary: #2D9469;
+        --safe-area-inset-top: env(safe-area-inset-top);
+        --safe-area-inset-bottom: env(safe-area-inset-bottom);
+      }
+      body {
+        font-family: 'Cairo', sans-serif;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        overflow-x: hidden;
+        background-color: #f8fafc;
+        padding-top: var(--safe-area-inset-top);
+        padding-bottom: var(--safe-area-inset-bottom);
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      .leaflet-container {
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background: #f1f5f9;
+      }
+      
+      button:active { transform: scale(0.94); transition: transform 0.1s; }
+      .app-shadow { box-shadow: 0 25px 50px -12px rgba(45,148,105,0.2); }
+      
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      .animate-float { animation: float 3s ease-in-out infinite; }
+
+      @keyframes glow {
+        0% { box-shadow: 0 0 5px rgba(16, 185, 129, 0.2); }
+        50% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.6); }
+        100% { box-shadow: 0 0 5px rgba(16, 185, 129, 0.2); }
+      }
+      .animate-glow { animation: glow 2s ease-in-out infinite; }
+
+      @keyframes slide-up-reveal {
+        from { opacity: 0; transform: translateY(30px) scale(0.95); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .animate-reveal { animation: slide-up-reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    </style>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react/": "https://esm.sh/react@18.2.0/",
+        "react-dom": "https://esm.sh/react-dom@18.2.0",
+        "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+        "react-router-dom": "https://esm.sh/react-router-dom@6.11.2?external=react,react-dom",
+        "lucide-react": "https://esm.sh/lucide-react@0.244.0?external=react",
+        "recharts": "https://esm.sh/recharts@2.12.7?external=react,react-dom",
+        "leaflet": "https://esm.sh/leaflet@1.9.4",
+        "react-leaflet": "https://esm.sh/react-leaflet@4.2.1?external=react,react-dom,leaflet",
+        "@google/genai": "https://esm.sh/@google/genai@1.34.0",
+        "path": "https://esm.sh/path@^0.12.7",
+        "vite": "https://esm.sh/vite@^7.3.0",
+        "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+        "url": "https://esm.sh/url@^0.11.4",
+        "@/": "./"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="./styles/index.css">
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#f8fafc] text-slate-900">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
