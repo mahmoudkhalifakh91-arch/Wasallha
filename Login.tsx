@@ -2,13 +2,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 // Types
-import type { User, VehicleType, UserRole } from '../types';
+import type { User, VehicleType, UserRole } from '/types';
 
 // Utils
-import { stripFirestore } from '../utils';
+import { stripFirestore } from '/utils';
 
 // Services
-import { auth, db } from '../services/firebase';
+import { auth, db } from '/firebase';
 import { 
   signInWithEmailAndPassword, 
   createUserWithEmailAndPassword 
