@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route, Navigate, Link } from "react-router-dom";
 
 // Types
-import type { User } from '../types';
+import type { User } from '/types';
 
 // Utils
-import { stripFirestore } from '../utils';
+import { stripFirestore } from '/utils';
 
 // Icons
 import { LogOut, RefreshCcw, WifiOff, Loader2, Bell, MessageCircle, X } from 'lucide-react';
