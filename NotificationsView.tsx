@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
-import type { User } from '../types';
-import { db } from '../services/firebase';
+import type { User } from '/types';
+import { db } from '/firebase';
 import { collection, query, where, onSnapshot, doc, updateDoc, writeBatch } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-import { stripFirestore } from '../utils';
+import { stripFirestore } from '/utils';
 import { Bell, Info, CheckCircle, AlertCircle, ChevronRight, Loader2, Volume2, Sparkles } from 'lucide-react';
 
 interface NotificationItem {
