@@ -2,19 +2,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 // Types
-import type { User, Order } from '../types';
-import { OrderStatus } from '../types';
-import { District, MENOFIA_DATA } from '../config/constants';
+import type { User, Order } from '/types';
+import { OrderStatus } from '/types';
+import { District, MENOFIA_DATA } from '/constants';
 
 // Services
-import { db } from '../services/firebase';
+import { db } from '/firebase';
 import { 
   collection, query, onSnapshot, orderBy, doc, 
   updateDoc, where, getDocs, limit 
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 // Utils
-import { stripFirestore } from '../utils';
+import { stripFirestore } from '/utils';
 
 // Icons
 import { 
