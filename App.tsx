@@ -12,7 +12,7 @@ import { stripFirestore } from '../utils';
 import { LogOut, RefreshCcw, WifiOff, Loader2, Bell, MessageCircle, X } from 'lucide-react';
 
 // Services
-import { auth, db } from '../services/firebase';
+import { auth, db } from '/firebase';
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 import { doc, getDoc, collection, query, where, onSnapshot } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
